@@ -4,7 +4,7 @@ DIARY_DIR=$BASH_DIARY_DIR
 
 # set default dir
 if [[ $DIARY_DIR == '' ]]; then
-  DIARY_DIR="~/.diary/"
+  DIARY_DIR="$HOME/.diary/"
 fi
 
 SHORTOPTS="hn:"
