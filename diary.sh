@@ -39,7 +39,7 @@ while [[ $1 != '' ]]; do
         DIARY_NAME="_$2"; shift
       ;;
       *)
-        printf "$2 is not a valid option"
+        printf "$1 is not a valid option"
       ;;
   esac
   shift
