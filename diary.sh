@@ -1,10 +1,19 @@
 #!/usr/bin/env bash
 
-DIARY_DIR=$BASH_DIARY_DIR
+# This variable is set elsewhere...
+# TODO put more info in the README about this Variable
+DIARY_DIR="$BASH_DIARY_DIR"
 
 # set default dir
-if [[ $DIARY_DIR == '' ]]; then
+if [[ -z "$DIARY_DIR" ]]; then
   DIARY_DIR="$HOME/.diary/"
+fi
+
+# Important to check if the folder exists
+# and if not then to creaete it as writing to
+# it later if it doesnt exist will fail
+if [[ ! -d "$DIARY_DIR" ]]; then
+  mkdir "$DIARY_DIR"
 fi
 
 SHORTOPTS="hn:"
